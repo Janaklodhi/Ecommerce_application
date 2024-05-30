@@ -5,6 +5,7 @@ class Cart < ApplicationRecord
   has_many :products, dependent: :destroy
   belongs_to :coupon, optional: true
   has_many :orders
+  has_many :orders, dependent: :destroy
 
 
   # def total_price_without_coupon
